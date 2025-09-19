@@ -1,0 +1,26 @@
+[
+    {
+        "sender": "user",
+        "text": "hello"
+    },
+    {
+        "sender": "bot",
+        "text": "Hello there!  How can I help you today?\n"
+    },
+    {
+        "sender": "user",
+        "text": "i am very lonely"
+    },
+    {
+        "sender": "bot",
+        "text": "I'm so sorry to hear that you're feeling lonely. That's a tough feeling to experience.  Before we explore ways to help, could you tell me a little more about what's making you feel this way?  Knowing more might help me understand better how to support you.  For example, is this a new feeling, or have you been feeling this way for a while?  Is there anything specific happening in your life right now?  You don't have to share anything you're not comfortable with, of course.\n"
+    },
+    {
+        "sender": "user",
+        "text": "yeah every ditch mee"
+    },
+    {
+        "sender": "bot",
+        "text": "Okay, I understand.  \"Every ditch mee\" suggests you feel abandoned or left out.  That sounds really painful.  It's important to remember you're not alone in feeling this way, many people experience loneliness and feeling abandoned.\n\nCan you tell me a little more about what's happening?  Who is \"ditching\" you?  Is it friends, family, or colleagues?  Understanding the context will help me offer more specific support.  Even small details can be helpful.  And remember, it's okay to not feel okay.  We can work through this together.\n"
+    }
+]

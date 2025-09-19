@@ -1,0 +1,18 @@
+[
+    {
+        "sender": "user",
+        "text": "hello"
+    },
+    {
+        "sender": "bot",
+        "text": "Hello there!  How can I help you today?\n"
+    },
+    {
+        "sender": "user",
+        "text": "i feel low"
+    },
+    {
+        "sender": "bot",
+        "text": "I'm sorry to hear that you're feeling low.  It takes courage to talk about this, and I appreciate you sharing.  Is there anything specific that's been bothering you?  Sometimes just talking about it can help.  Or, if you'd prefer, we could try some relaxation techniques or just chat about something else to take your mind off things.  What feels best to you right now?\n"
+    }
+]

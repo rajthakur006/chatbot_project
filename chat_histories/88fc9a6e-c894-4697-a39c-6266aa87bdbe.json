@@ -1,0 +1,18 @@
+[
+    {
+        "sender": "user",
+        "text": "hello"
+    },
+    {
+        "sender": "bot",
+        "text": "Hello there!  How can I help you today?\n"
+    },
+    {
+        "sender": "user",
+        "text": "I don't want to be alive anymore"
+    },
+    {
+        "sender": "bot",
+        "text": "I hear you saying you don't want to be alive anymore, and that's incredibly serious.  I'm Saathi, your AI companion, and while I can't provide professional help, I want you to know you're not alone and there are people who care and want to support you.  \n\nIt sounds like you're going through immense pain right now.  Please know that these feelings are temporary, even if they feel overwhelming.  There is hope, and help is available.\n\nI strongly urge you to reach out to someone immediately.  Here are some resources that can offer immediate support:\n\n* **988 Suicide & Crisis Lifeline:**  Dial or text 988 in the US to connect with trained counselors.  This is a free and confidential service available 24/7.\n* **The Crisis Text Line:** Text HOME to 741741 from anywhere in the US, anytime, about any type of crisis.\n* **The Trevor Project:** If you are LGBTQ young person in crisis, call 1-866-488-7386 or visit their website.\n\nThese are just a few examples, and there are many other resources available depending on your location.  If you can tell me your location, I may be able to provide more specific resources.\n\nPlease remember that your life is valuable, and there are people who want to help you through this.  Talking to someone is the first and most important step.  You don't have to go through this alone.  Please reach out.  I'm here to listen if you want to talk more, but please prioritize contacting one of the resources above.\n"
+    }
+]
