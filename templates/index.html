@@ -3,42 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVA </title>
-    <link rel="stylesheet" href="../static/style.css">
+    <title>NOVA🌼</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f4f7f6; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        #chat-container { width: 90%; max-width: 600px; height: 80vh; background-color: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+        #chat-header { background-color: #007bff; color: white; padding: 16px; border-top-left-radius: 12px; border-top-right-radius: 12px; text-align: center; }
+        #chat-header h1 { margin: 0; font-size: 1.2em; }
+        #chat-box { flex-grow: 1; padding: 20px; overflow-y: auto; border-bottom: 1px solid #ddd; }
+        .message { margin-bottom: 15px; }
+        .user-message { text-align: right; }
+        .bot-message { text-align: left; }
+        .message p { display: inline-block; padding: 10px 15px; border-radius: 18px; max-width: 80%; }
+        .user-message p { background-color: #007bff; color: white; }
+        .bot-message p { background-color: #e9e9eb; color: #333; }
+        #input-form { display: flex; padding: 15px; }
+        #user-input { flex-grow: 1; border: 1px solid #ccc; border-radius: 20px; padding: 10px 15px; font-size: 1em; }
+        #send-btn { background-color: #007bff; color: white; border: none; border-radius: 50%; width: 45px; height: 45px; margin-left: 10px; cursor: pointer; font-size: 1.5em; line-height: 45px; text-align: center; }
+        #send-btn:hover { background-color: #0056b3; }
+    </style>
 </head>
 <body>
-    <!-- The new slide-out sidebar -->
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <button id="new-chat-btn">➕ New Chat</button>
+    <div id="chat-container">
+        <div id="chat-header">
+            <h1>NOVA🌼</h1>
         </div>
-        <div class="history-container" id="history-container">
-            <!-- Chat history links will be dynamically added here -->
-        </div>
-        <div class="user-profile" id="user-profile">
-            <!-- This will show Sign In or the user's email -->
-            <a href="#" id="auth-link">Sign In / Sign Up</a>
-        </div>
-    </div>
-
-    <!-- The main content area -->
-    <div class="main-content">
-        <!-- The new hamburger menu button -->
-        <button class="menu-btn" id="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="chat-container">
-            <div class="chat-header"><h2>NOVA🌼</h2><p>Your Virtual Friend</p></div>
-            <div class="chat-box" id="chat-box"></div>
-            <div class="chat-input">
-                <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
-                <button id="send-btn">Send</button>
-                <button id="mic-btn">🎙️</button>
+        <div id="chat-box">
+            <div class="message bot-message">
+                <p>Hello! I'm here to listen and support you. How are you feeling today?</p>
             </div>
         </div>
+        <form id="input-form">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-btn" type="submit">&#10148;</button>
+        </form>
     </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <script>
+        const chatBox = document.getElementById('chat-box');
+        const inputForm = document.getElementById('input-form');
+        const userInput = document.getElementById('user-input');
+
+        inputForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const messageText = userInput.value.trim();
+            if (messageText === '') return;
+
+            // Display user message
+            addMessage(messageText, 'user-message');
+            userInput.value = '';
+
+            // Get bot response
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: messageText }),
+            });
+            const data = await response.json();
+            
+            // Display bot message
+            addMessage(data.response, 'bot-message');
+        });
+
+        function addMessage(text, className) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${className}`;
+            
+            const messageP = document.createElement('p');
+            // Sanitize and format the text to handle newlines
+            messageP.innerHTML = text.replace(/\n/g, '<br>');
+            
+            messageDiv.appendChild(messageP);
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
 </body>
 </html>

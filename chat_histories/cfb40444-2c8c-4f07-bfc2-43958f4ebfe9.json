@@ -1,0 +1,18 @@
+[
+    {
+        "sender": "user",
+        "text": "hi"
+    },
+    {
+        "sender": "bot",
+        "text": "Hello there!  How can I help you today?\n"
+    },
+    {
+        "sender": "user",
+        "text": "I feel like I'm always the one who feels like I'm being pushed away"
+    },
+    {
+        "sender": "bot",
+        "text": "That sounds really tough.  It\u2019s understandable that feeling constantly pushed away would be upsetting.  To help me understand better, could you tell me a bit more about what's happening?  For example:\n\n* **Who is pushing you away?** Is it a specific person or people?  (e.g., friends, family, romantic partner, classmates)\n* **In what ways do you feel pushed away?**  Are they ignoring you, being short with you, making plans without you, excluding you from conversations or activities?  Specific examples would be really helpful.\n* **How long has this been happening?**\n* **How does it make you feel?**  Besides feeling pushed away, are there other emotions involved, like sadness, anger, loneliness, or insecurity?\n\n\nKnowing more about the situation will help me offer more specific and helpful advice.  Remember, it's okay to feel this way, and it's important to address it.  I'm here to listen and support you.\n"
+    }
+]

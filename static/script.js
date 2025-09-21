@@ -137,3 +137,27 @@ sendMessage();
     // --- INITIAL LOAD ---
     startNewChat();
 });
+/**
+ * This function creates and displays a new message bubble.
+ * @param {string} text - The message text.
+ * @param {string} className - The CSS class ('user-message' or 'bot-message').
+ */
+function addMessage(text, className) {
+    // Get the chat window element
+    const chatWindow = document.getElementById('chat-window');
+
+    // Create a new 'div' element for the message bubble
+    const messageDiv = document.createElement('div');
+    
+    // Add the correct CSS classes to style it
+    messageDiv.className = `message ${className}`; 
+    
+    // Set the text content of the bubble
+    messageDiv.textContent = text;
+    
+    // Add the new message bubble to the chat window
+    chatWindow.appendChild(messageDiv);
+    
+    // Automatically scroll to the bottom to see the latest message
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+}
